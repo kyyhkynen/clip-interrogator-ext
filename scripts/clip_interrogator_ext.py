@@ -63,8 +63,7 @@ def load(clip_model_name):
         config = Config(
             device=devices.get_optimal_device(),
             cache_path = 'models/clip-interrogator',
-            clip_model_name=clip_model_name,
-            blip_model=shared.interrogator.load_blip_model().float()
+            clip_model_name=clip_model_name
         )
         if low_vram:
             config.apply_low_vram_defaults()
